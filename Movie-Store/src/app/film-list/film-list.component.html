@@ -1,0 +1,111 @@
+<div style="text-align: center">
+  <h1 style="color:aliceblue ;">Movie Search</h1>
+</div>
+<div class="search-container">
+  <br />
+  <label class="label" for="search-attribute">Search Attribute:</label>
+  <select id="search-attribute" [(ngModel)]="searchAttribute">
+    <!-- Options -->
+    <option value="title">Title</option>
+    <option value="releaseYear">Release Year</option>
+    <!-- <option value="filmId">Film ID</option> -->
+    <option value="rentalDurationgreaterthan">
+      Rental Duration(Greater)
+    </option>
+    <option value="rentalDurationlowerthan">Rental Duration(Lower)</option>
+    <option value="rentalrategreaterthan">Rental Rate(Greater)</option>
+    <option value="rentalratelowerthan">Rental Rate(Lower)</option>
+    <option value="lengthgraeater">Film Length(Greater)</option>
+    <option value="lengthlower">Film Length(Lower)</option>
+    <option value="releaseYearRange">movies between two year</option>
+    <option value="ratinggreaterthan">Rating(Greater)</option>
+    <option value="ratinglowerthan">Rating(Lower)</option>
+    <option value="filmsbyactorid">Search Film By actor Id</option>
+    <!-- <option value="countbyyear">Count By Year</option> -->
+    <option value="update">Update</option>
+    <option value="buy">Buy</option>
+
+  </select>
+
+  <div *ngIf="searchAttribute === 'releaseYearRange'">
+    <label class="label" for="search-query1">Start Year:</label>
+    <input type="text" id="search-query1" [(ngModel)]="startYear" />
+    <label class="label" for="search-query2">End Year:</label>
+    <input type="text" id="search-query2" [(ngModel)]="endYear" />
+  </div>
+  <div *ngIf="searchAttribute !== 'releaseYearRange'">
+    <label class="label" for="search-query">Search Query:</label>
+    <input type="text" id="search-query" [(ngModel)]="searchQuery" />
+  </div>
+  <button (click)="search()">Search</button>
+</div>
+<div>
+  <button (click)="getFilmCountByYear()">Get Film Count by Year</button>
+  <table *ngIf="showTable" class="table">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of filmCountEntries">
+        <td>{{ entry.key }}</td>
+        <td>{{ entry.value }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<table class="table table-responsive table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>filmId</th>
+      <th>title</th>
+      <th>description</th>
+      <th>relaseYear</th>
+      <th>languageId</th>
+      <!-- <th>orignalLanguageId</th>  -->
+      <th>rentalDuration</th>
+      <th>rentalRate</th>
+      <th>length</th>
+      <th>replacementCost</th>
+      <th>rating</th>
+      <th>specialFeature</th>
+      <th>lastUpdate</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="
+    let films of allFilmlist
+    | paginate : { itemsPerPage: 20, currentPage: p }
+      ">
+      <td>{{ films.filmId }}</td>
+      <td>{{ films.title }}</td>
+      <td>{{ films.description }}</td>
+      <td>{{ films.releaseYear }}</td>
+      <td>{{ films.languageId }}</td>
+      <!-- <td>{{ films.orignalLanguageId }}</td> -->
+      <td>{{ films.rentalDuration }}</td>
+      <td>{{ films.rentalRate }}</td>
+      <td>{{ films.length }}</td>
+      <td>{{ films.replacementCost }}</td>
+      <td>{{ films.rating }}</td>
+      <td>{{ films.specialFeatures }}</td>
+      <td>{{ films.lastUpdate }}</td>
+      <td>
+        <ng-container *ngIf="searchAttribute === 'update'; else buyOption">
+          <button class="btn-update" routerLink='../update-film' routeerLinkActive="active">Update</button>
+        </ng-container>
+        <ng-template #buyOption>
+          <input type="checkbox" (change)="onFilmSelect(films)">
+        </ng-template>
+      </td>
+      <!-- <td><button class="btn-edit" (click) = "onBuyClick()">Buy</button></td>  -->
+    </tr>
+  </tbody>
+</table>
+<div class="pagination-container">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+<button class="fixed-floating-button" routerLink="/customer-list" [disabled]="selectedFilms.length === 0">Buy</button>

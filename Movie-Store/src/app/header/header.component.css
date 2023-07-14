@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:transparent;
+  
+}
+.card {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  width:100% ;
+  margin-bottom: 20px;
+  height: 270px; /* Adjust the height as needed */
+  display: flex;
+  object-fit: contain; 
+  background-image: url(src/assets/poster.png);
+  transition: transform 450ms;
+  
+}
+
+.card::-webkit-scrollbar{
+  display: none;
+}
+.card:hover{
+  transform: scale(1.08);
+
+}
+.card-title{
+  font-weight: bolder;
+  margin-top: 80px;
+    
+    text-align: center;
+}
+
+
+.row__poster {
+  width:100% ;
+  object-fit: contain;
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row {
+  color: white;
+  margin-left: 15px;
+}

@@ -1,0 +1,140 @@
+<div class="container">
+  <h3>Add New Customer</h3>
+
+  <form (ngSubmit)="onAddCustomer()">
+    <div class="form-group">
+      <label for="storeId" class="control-label">Store ID</label>
+
+      <input
+        type="number"
+        id="storeId"
+        name="storeId"
+        required
+        maxlength="10"
+        [(ngModel)]="customer.storeId"
+        #storeId="ngModel"
+        [ngClass]="{ error: storeId.errors && storeId.touched }"
+      />
+
+      <div *ngIf="storeId.errors && storeId.touched">
+        <small class="text-danger" *ngIf="storeId.errors['required']"
+          >Store Id is required</small
+        >
+      </div>
+
+      <label for="firstName" class="control-label">First Name</label>
+
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        required
+        maxlength="10"
+        [pattern]="nameRegex"
+        [(ngModel)]="customer.firstName"
+        #firstName="ngModel"
+        [ngClass]="{ error: firstName.errors && firstName.touched }"
+      />
+
+      <div *ngIf="firstName.errors && firstName.touched">
+        <small class="text-danger" *ngIf="firstName.errors['required']"
+          >First Name is required</small
+        >
+
+        <small class="text-danger" *ngIf="firstName.errors['pattern']"
+          >please Enter valid name</small
+        >
+      </div>
+
+      <label for="lastName" class="control-label">Last Name</label>
+
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        required
+        maxlength="10"
+        [pattern]="nameRegex"
+        [(ngModel)]="customer.lastName"
+        #lastName="ngModel"
+        [ngClass]="{ error: lastName.errors && lastName.touched }"
+      />
+
+      <div *ngIf="lastName.errors && lastName.touched">
+        <small class="text-danger" *ngIf="lastName.errors['required']"
+          >Last Name is required</small
+        >
+
+        <small class="text-danger" *ngIf="lastName.errors['pattern']"
+          >Enter Charactors only <br />please Enter valid name</small
+        >
+      </div>
+
+      <label for="email" class="control-label">Email</label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        maxlength="20"
+        [pattern]="emailRegex"
+        [(ngModel)]="customer.email"
+        #email="ngModel"
+        [ngClass]="{ error: email.errors && email.touched }"
+      />
+
+      <div *ngIf="email.errors && email.touched">
+        <small class="text-danger" *ngIf="email.errors['required']"
+          >Email is required</small
+        >
+
+        <small class="text-danger" *ngIf="email.errors['pattern']"
+          >please Enter valid Email</small
+        >
+      </div>
+
+      <label for="addressId" class="control-label">Address ID</label>
+
+      <input
+        type="number"
+        id="addressId"
+        name="addressId"
+        required
+        maxlength="10"
+        [(ngModel)]="customer.addressId"
+        #addressId="ngModel"
+        [ngClass]="{ error: addressId.errors && addressId.touched }"
+      />
+
+      <div *ngIf="addressId.errors && addressId.touched">
+        <small class="text-danger" *ngIf="addressId.errors['required']"
+          >Address Id is required</small
+        >
+      </div>
+      <br /><br />
+
+      <label for="active" class="control-label">Active</label>
+
+      <input
+        type="number"
+        id="active"
+        name="active"
+        required
+        maxlength="10"
+        [(ngModel)]="customer.active"
+        #active="ngModel"
+        [ngClass]="{ error: active.errors && active.touched }"
+      />
+
+      <div *ngIf="active.errors && active.touched">
+        <small class="text-danger" *ngIf="active.errors['required']"
+          >Press 1</small
+        >
+      </div>
+      <br /><br />
+
+      <button type="submit">Add New Customer</button>
+    </div>
+  </form>
+</div>

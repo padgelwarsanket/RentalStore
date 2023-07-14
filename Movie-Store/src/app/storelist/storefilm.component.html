@@ -1,0 +1,63 @@
+<div class="container">
+  <h3>Store List</h3>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>Find by:</h5>
+
+      <div>
+        <label class="label" for="search-attribute">Search Attribute:</label>
+
+        <select id="search-attribute" [(ngModel)]="searchAttribute">
+          <option value="City">City</option>
+
+          <option value="Country">Country</option>
+
+          <option value="phonenumber">Phone Number</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label" for="search-query">Search Query:</label>
+
+        <input type="text" id="search-query" [(ngModel)]="searchQuery" />
+
+        <button (click)="search()">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Store ID</th>
+
+        <th>Manager Staff Id</th>
+
+        <th>Address Id</th>
+
+        <th>Last Update</th>
+
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let Store of storelist">
+        <td>{{ Store.storeId }}</td>
+
+        <td>{{ Store.managerStaffId }}</td>
+
+        <td>{{ Store.addressId }}</td>
+
+        <td>{{ Store.lastUpdate | date }}</td>
+
+        <td>
+          <button type="button" class="btn btn-dark">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="storelist.length === 0">No store found.</div>
+</div>

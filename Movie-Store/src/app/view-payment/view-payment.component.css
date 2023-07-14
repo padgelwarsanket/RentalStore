@@ -1,0 +1,12 @@
+.box{
+  
+  color: aliceblue;
+}
+.container {
+    padding: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+    
+  }

@@ -1,0 +1,83 @@
+<div class="box">
+<h2>Revenue Date-wise</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Payment Date</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <div class="container">
+  <tbody>
+    <tr *ngFor="let payment of revenueDateWiseData">
+      <td>{{ payment.paymentDate }}</td>
+      <td>{{ payment.amount }}</td>
+    </tr>
+  </tbody>
+</div>
+</table>
+</div>
+
+<!-- <h2>Revenue Store-wise</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Payment Date</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let payment of revenueStoreWiseData">
+      <td>{{ payment.paymentDate }}</td>
+      <td>{{ payment.amount }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Revenue Film-wise</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Film Title</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let film of revenueFilmWiseData">
+      <td>{{ film.filmTitle }}</td>
+      <td>{{ film.amount }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Revenue By Film ID</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Payment Date</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let payment of revenueFilmByIdData">
+      <td>{{ payment.paymentDate }}</td>
+      <td>{{ payment.amount }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Revenue Films Store-wise</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Store Address</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let store of revenueFilmsStoreWiseData">
+      <td>{{ store.storeAddress }}</td>
+      <td>{{ store.amount }}</td>
+    </tr>
+  </tbody>
+</table> -->

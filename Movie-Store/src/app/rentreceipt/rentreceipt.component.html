@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+    <h1>Rent Receipt</h1>
+        
+    <div class="card-body">
+    <form class="rent-receipt-form" (ngSubmit)="submitRentReceiptForm()">
+      <div>
+        <label for="staffId">Staff ID:</label>
+        <input type="text" id="staffId" name="staffId" [(ngModel)]="rentReceipt.staffId">
+      </div>
+  
+      <div>
+        <label for="customerId">Customer ID:</label>
+        <input type="text" id="customerId" name="customerId" [(ngModel)]="rentReceipt.customerId">
+      </div>
+  
+      <div>
+        <label for="inventoryId">Inventory ID:</label>
+        <input type="text" id="inventoryId" name="inventoryId" [(ngModel)]="rentReceipt.inventoryId">
+      </div>
+  
+      <button type="submit">Submit Rent Receipt</button>
+    </form>
+</div>
+  </div>
+  </div>
+  

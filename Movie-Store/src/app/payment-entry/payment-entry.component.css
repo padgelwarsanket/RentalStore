@@ -1,0 +1,41 @@
+.container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+    background-color: transparent;
+    
+  }
+.card {
+    justify-content: center;
+    max-width: 400px;
+    padding: 20px;
+    background-color:transparent;
+    border-radius: 5px;
+    color: rgb(241, 236, 236);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(238, 56, 56, 0.1);
+  }
+  .card input[type="text"],
+  .card input[type="number"],
+  .card input[type="email"],
+  .card input[type="password"],
+  .card input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .card button[type="submit"] {
+    background-color: #897e06;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+  }
+  
+  .card button[type="submit"]:hover {
+    background-color: #9f9c07;
+  }

@@ -1,0 +1,51 @@
+<div class="container" style="text-align: center">
+  <h3 style="color: white;">Inventory List</h3>
+  <div class="card">
+    <div class="card-header">
+      <h5>Find by:</h5>
+      <div>
+        <label class="label" for="search-attribute">Search Attribute:</label>
+        <select id="search-attribute" [(ngModel)]="searchAttribute">
+          <option value="1">Inventory of all Films in all Stores</option>
+          <option value="2">Get Inventory By Store Id</option>
+          <option value="3">Get Inventory By Film Id</option>
+          <option value="4">Get Inventory By Film Id And Store Id</option>
+        </select>
+      </div>
+      <div *ngIf="searchAttribute === '4'">
+        <label class="label" for="search-query1">filmId:</label>
+        <input type="text" id="search-query1" [(ngModel)]="startYear" />
+        
+        <label class="label" for="search-query2">Store Id :</label>
+        <input type="text" id="search-query2" [(ngModel)]="endYear" />
+        <button (click)="search()">Search</button>
+      </div>
+      <div *ngIf="searchAttribute !== '4'">
+        <label class="label" for="search-query">Search Query:</label>
+        <input type="text" id="search-query" [(ngModel)]="searchQuery" />
+        <button (click)="search()">Search</button>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Inventory ID</th>
+            <th>Film ID</th>
+            <th>Store ID</th>
+            <!-- <th>Last Update</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Inventoryone of Inventorylist | paginate : { itemsPerPage: 20, currentPage: p}">
+            <td>{{ Inventoryone.inventoryId }}</td>
+            <td>{{ Inventoryone.filmId }}</td>
+            <td>{{ Inventoryone.storeId }}</td>
+            <!-- <td>{{ Inventoryone.lastUpdate | date }}</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="pagination-container">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

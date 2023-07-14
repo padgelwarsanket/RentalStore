@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <p>
+    <mat-toolbar class="exm">
+      <mat-toolbar-row>
+        <span>
+          <a routerLink="login" class="my-link">
+            <img src="assets/lg.png" style="height: 30px; width: 30px; margin-bottom: 12px;">
+            <h2 style="display: inline;">
+              <span style="font-family: fantasy; color: rgb(232, 7, 7);"> MOVIE</span>
+              <span style="font-family: fantasy; color: black;">STORE</span>
+            </h2>
+          </a>
+        </span>
+        <div class="dropdown">
+          <button class="btn btn-toggle align-items-center rounded collapsed" routerLink='../film-list'>
+            Search Films
+          </button>
+        </div>
+
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="icon" aria-label="Example icon-button with heart icon">
+          <mat-icon routerLink='../profile'>account_circle</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>
+  <div class="col-md-13">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</body>
+<footer class=" footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>About Us</h4>
+        <p>
+          Welcome to our DVD Store! We offer a wide selection of movies and TV shows on DVD for your entertainment
+          needs.
+          Browse our collection and find your favorite titles to enjoy at home.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4>Contact Information</h4>
+        <p>
+          Address: 1234 Main Street, City, State ZIP<br>
+          Phone: (123) 456-7890<br>
+          Email: info@dvdstore.com
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4>Connect With Us</h4>
+        <p>
+          Stay up to date with our latest releases, promotions, and news by following us on social media:
+        </p>
+        <ul class="social-media">
+          <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2023 DVD Store. All rights reserved.</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="footer-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>

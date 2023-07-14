@@ -1,0 +1,40 @@
+<h1>Cart</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>filmId</th>
+      <th>title</th>
+      <th>description</th>
+      <th>releaseYear</th>
+      <th>languageId</th>
+      <th>rentalDuration</th>
+      <th>rentalRate</th>
+      <th>length</th>
+      <th>replacementCost</th>
+      <th>rating</th>
+      <th>specialFeature</th>
+      <th>lastUpdate</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let film of selectedFilms">
+      <td>{{ film.filmId }}</td>
+      <td>{{ film.title }}</td>
+      <td>{{ film.description }}</td>
+      <td>{{ film.releaseYear }}</td>
+      <td>{{ film.languageId }}</td>
+      <td>{{ film.rentalDuration }}</td>
+      <td>{{ film.rentalRate }}</td>
+      <td>{{ film.length }}</td>
+      <td>{{ film.replacementCost }}</td>
+      <td>{{ film.rating }}</td>
+      <td>{{ film.specialFeatures }}</td>
+      <td>{{ film.lastUpdate }}</td>
+      <td>
+        <button (click)="removeFilm(film)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="checkout()">Checkout</button>

@@ -1,0 +1,50 @@
+
+.card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #eae5e5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(245, 242, 242);
+    
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: rgb(242, 203, 7);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #111211;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      padding: 10px;
+    }
+  }
+  

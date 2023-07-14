@@ -1,0 +1,111 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: transparent;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .login-form {
+    width: 300px;
+    margin-top: 90px;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background:transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(246, 242, 242);
+  }
+  .login-form h2{
+    text-align: center;
+    color: rgb(241, 236, 236);
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .login-form button {
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    padding: 10px;
+    background: rgb(242, 203, 7);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+   body {
+    height: max-content;
+    width:100%;
+    color: aliceblue;
+    min-height: -webkit-fill-available;
+    background-color: transparent;
+  }  
+  
+  /* .card-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  } */
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input.form-control.is-invalid {
+    border-color: #dc3545;
+  }
+
+  .invalid-feedback {
+    color: #dc3545;
+    font-size: 14px;
+  }
+
+  button.btn-primary {
+    border-radius: 20px;
+    background-color: rgb(242, 203, 7);
+    width: 50%;
+  }
+
+  .alert {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }

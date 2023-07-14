@@ -1,0 +1,68 @@
+<div class="search-container">
+  <label class="label" for="search-attribute">Search Attribute:</label>
+  <select id="search-attribute" [(ngModel)]="searchAttribute">
+    <option value="CumulativeRevenueDateWise">
+      Cumulative Revenue Date Wise
+    </option>
+  </select>
+
+  <button (click)="search()">Search</button>
+</div>
+
+<div *ngIf="paymentTable">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Payment ID</th>
+        <th>Customer ID</th>
+        <th>Staff ID</th>
+        <th>Rental ID</th>
+        <th>Amount</th>
+        <th>Payment Date</th>
+        <th>Last Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let payment of payments
+            | paginate : { itemsPerPage: 20, currentPage: p }
+        "
+      >
+        <td class="payment-table td">{{ payment.paymentId }}</td>
+        <td class="payment-table td">{{ payment.customerId }}</td>
+        <td class="payment-table td">{{ payment.staffId }}</td>
+        <td class="payment-table td">{{ payment.rentalId }}</td>
+        <td class="payment-table td">{{ payment.amount }}</td>
+        <td class="payment-table td">{{ payment.paymentDate }}</td>
+        <td class="payment-table td">{{ payment.lastUpdate }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Table for revenue dateWise -->
+<div *ngIf="dateWiseTable">
+  <table
+    class="table table-group-divider"
+    style="color: black; background-color: white"
+  >
+    <thead>
+      <ng-container *ngFor="let head of headers">
+        <th>{{ head }}</th>
+      </ng-container>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let payment of payments
+            | paginate : { itemsPerPage: 20, currentPage: p }
+        "
+      >
+        <td class="payment-table td">{{ payment.paymentDate }}</td>
+        <td class="payment-table td">{{ payment.amount }}</td>
+        <td class="payment-table td">{{ payment.sum }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

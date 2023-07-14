@@ -1,0 +1,30 @@
+<div class="card">
+  <h1>Payment Details</h1>
+  <form (ngSubmit)="submitPaymentForm()">
+    <div>
+      <label for="customerId">Customer ID:</label>
+      <input type="text" id="customerId" name="customerId" [(ngModel)]="customerId" disabled>
+    </div>
+    <div>
+      <label for="staffId">Staff ID:</label>
+      <input type="text" id="staffId" name="staffId" [(ngModel)]="staffId">
+    </div>
+    <div *ngFor="let title of selectedFilmTitles">
+      <div>
+        <label for="title{{ title }}">Film Title: </label>
+        <input type="text" id="title{{ title }}" name="title{{ title }}" [value]="title" disabled>
+      </div>
+      <div>
+        <label for="rentalRate{{ title }}">Rental Rate: </label>
+        <input type="text" id="rentalRate{{ title }}" name="rentalRate{{ title }}" [value]="getRentalRateForFilm(title)"
+          disabled>
+      </div>
+    </div>
+    <div>
+      <label for="totalRentalRate">Total Rental Rate:</label>
+      <input type="text" id="totalRentalRate" name="totalRentalRate" [value]="totalRentalRate" disabled>
+    </div>
+  
+    <button type="submit">Submit Payment</button>
+  </form>
+</div>

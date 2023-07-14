@@ -1,0 +1,57 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #eae4e4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(245, 242, 242);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.control-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+button {
+  background-color: rgb(242, 203, 7);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.form-control-lg {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Adjusted size for medium input boxes */
+input[type="text"].medium {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Add more styles as needed */

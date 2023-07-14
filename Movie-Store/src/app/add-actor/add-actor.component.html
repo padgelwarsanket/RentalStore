@@ -1,0 +1,44 @@
+<div class="container">
+  <h3>Add new actor</h3>
+
+  <form (ngSubmit)="onAddActor()">
+    <div class="form-group">
+      <label for="firstName" class="control-label">First Name</label>
+
+      <input
+        type="text"
+        name="firstName"
+        [(ngModel)]="actors.firstName"
+        placeholder="First Name"
+        required
+        #firstName="ngModel"
+        [ngClass]="{ error: firstName.errors && firstName.touched }"
+      />
+
+      <div *ngIf="firstName.errors && firstName.touched">
+        <small class="text-danger" *ngIf="firstName.errors['required']"
+          >First Name is required</small
+        >
+      </div>
+
+      <label for="lastName" class="control-label">Last Name</label>
+
+      <input
+        type="text"
+        name="actorLastName"
+        [(ngModel)]="actors.lastName"
+        placeholder="Last Name"
+        required
+        #lastName="ngModel"
+        [ngClass]="{ error: lastName.errors && lastName.touched }"
+      />
+
+      <div *ngIf="lastName.errors && lastName.touched">
+        <small class="text-danger" *ngIf="lastName.errors['required']"
+          >Last Name is required</small
+        >
+      </div>
+      <button type="submit">Add new actor</button>
+    </div>
+  </form>
+</div>

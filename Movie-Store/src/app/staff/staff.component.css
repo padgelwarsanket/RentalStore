@@ -1,0 +1,16 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  button{
+    color: aliceblue;
+    background-color: rgb(242, 203, 7);
+    border: 1px;
+    border-radius: 6px;
+  }
+  button:hover{
+    background-color: black;
+  }
+
+  

@@ -1,0 +1,49 @@
+<div class="container">
+  <h3>Add new film</h3>
+  <form (ngSubmit)="onAddFilm()">
+    <div class="form-group">      
+      <label for="Title" class="control-label">Title</label>
+      <input type="text" name="filmTitle" [(ngModel)]="film.title" />
+      <br /><br />
+      <label>description</label>
+      <input
+        type="text"
+        class="form-control-lg"
+        name="filmdescription"
+        [(ngModel)]="film.description"
+      />
+      <br /><br />
+      <label>releaseYear</label>
+      <input type="text" name="filmreleaseYear" [(ngModel)]="film.releaseYear" />
+      <br /><br />
+      <label>languageId</label>
+      <input type="text" name="filmlanguageId" [(ngModel)]="film.languageId" />
+      <br /><br />
+      <label>orignallanguageId</label>
+      <input type="text" name="filmorignallanguageId" [(ngModel)]="film.orignalLanguageId" />
+      <br /><br />
+      <label>rentalDuration</label>
+      <input type="text" name="filmrentalDuration" [(ngModel)]="film.rentalDuration" />
+      <br /><br />
+      <label>rentalRate</label>
+      <input type="text" name="filmRentalrate" [(ngModel)]="film.rentalRate" />
+      <br /><br />
+      <label>length</label>
+      <input type="text" name="filmLength" [(ngModel)]="film.length" />
+      <br /><br />
+      <label>replacementCost</label>
+      <input type="text" name="filmreplacementCost" [(ngModel)]="film.replacementCost" />
+      <br /><br />
+      <label>rating</label>
+      <input type="text" name="filmrating" [(ngModel)]="film.rating" />
+      <br /><br />
+      <label>specialFeatures</label>
+      <input type="text" name="filmspecialFeatures" [(ngModel)]="film.specialFeatures" />
+      <br /><br />
+      <!-- <label>lastUpdate</label>
+      <input type="text" name="filmlastUpdate" [(ngModel)]="film.lastUpdate" /> -->
+      <br /><br />
+      <button type="submit">Add new film</button>
+    </div>
+  </form>
+</div>

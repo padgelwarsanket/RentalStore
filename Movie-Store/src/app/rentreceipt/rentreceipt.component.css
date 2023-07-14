@@ -1,0 +1,52 @@
+.rent-receipt-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .rent-receipt-form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .rent-receipt-form label {
+    display: block;
+  }
+  
+  .rent-receipt-form input,
+  .rent-receipt-form button {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .rent-receipt-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  .rent-receipt-form button:hover {
+    background-color: #45a049;
+  }
+  .card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .card-header h1 {
+    margin: 0;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  

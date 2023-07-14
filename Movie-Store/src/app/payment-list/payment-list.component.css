@@ -1,0 +1,88 @@
+/* Responsive styles for search container */
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  color:white ;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  max-width: 200px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: rgb(242, 203, 7);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive styles for revenue data */
+h3 {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Responsive styles for payment table */
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-table-th {
+  background-color: #f2f2f2;
+}
+
+.payment-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Responsive styles for pagination container */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  /* Adjust the styles for smaller screens */
+  .search-container {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  select {
+    max-width: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .pagination-container {
+    margin-top: 10px;
+  }
+}
+.payment-table-th {
+  background-color: #f2f2f2;
+  width: 14%; /* Adjust the width as needed */
+}

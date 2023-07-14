@@ -1,0 +1,46 @@
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for table headers */
+  thead th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style for table cells */
+  tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Alternate row background color */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .label{
+    color: white;
+  }
+
+  .register-button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: rgb(242, 203, 7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .register-button:hover {
+    background-color: #45a049;
+  }
+  button{
+    border: 8px;
+    background-color:rgb(242, 203, 7);
+  }
+  

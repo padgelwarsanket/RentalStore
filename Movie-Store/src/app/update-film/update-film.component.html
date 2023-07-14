@@ -1,0 +1,86 @@
+[12:23] Rane, Yash
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Update Film</h5>
+
+    <form>
+      <div class="form-group">
+        <label for="filmIdInput">Film ID:</label>
+
+        <input
+          id="filmIdInput"
+          type="number"
+          name="filmId"
+          [(ngModel)]="filmId"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="titleInput">Title:</label>
+
+        <input id="titleInput" type="text" name="title" [(ngModel)]="title" />
+      </div>
+
+      <div class="form-group">
+        <label for="releaseYearInput">Release Year:</label>
+
+        <input
+          id="releaseYearInput"
+          type="text"
+          name="releaseYear"
+          [(ngModel)]="releaseYear"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="rentalDurationInput">Rental Duration:</label>
+
+        <input
+          id="rentalDurationInput"
+          type="text"
+          name="rentalDuration"
+          [(ngModel)]="rentalDuration"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="rentalRateInput">Rental Rate:</label>
+
+        <input
+          id="rentalRateInput"
+          type="text"
+          name="rentalRate"
+          [(ngModel)]="rentalRate"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="ratingInput">Rating:</label>
+
+        <input
+          id="ratingInput"
+          type="text"
+          name="rating"
+          [(ngModel)]="rating"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="languageIdInput">Language ID:</label>
+
+        <input
+          id="languageIdInput"
+          type="text"
+          name="language.languageId"
+          name="languageId"
+          [(ngModel)]="languageId"
+        />
+      </div>
+
+      <button class="btn btn-primary" (click)="updateFilm()">
+        Update Film
+      </button>
+    </form>
+  </div>
+</div>

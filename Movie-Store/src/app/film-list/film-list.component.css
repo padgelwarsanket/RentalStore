@@ -1,0 +1,70 @@
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  color: aliceblue;
+} 
+  
+  .label {
+    margin-right: 10px;
+  }
+  
+  select,
+  input {
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: rgb(242, 203, 7);
+    color: white;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: black;
+  }
+  .input-container {
+    margin-left: 10px;
+  }  
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust the margin value as needed */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .pagination-container {
+    margin-top: 2px; /* Adjust the margin value as needed */
+    color: aliceblue;
+  }
+  .fixed-floating-button {
+    position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  z-index: 9999;
+    /* Add any additional styling for the button */
+  }
+  body {
+    height: max-content;
+    margin-left: 0px;
+    padding: 50px;
+    width:100%;
+    min-height: -webkit-fill-available;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(src/assets/bg.jpeg);
+    color: aliceblue;
+  }

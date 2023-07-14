@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-lg-5">
+    <div class="card mb-4">
+      <div class="d-flex justify-content-end">
+        <div class="dropdown">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="36"
+            fill="currentColor"
+            class="bi bi-file-person dropdown-toggle"
+            data-bs-toggle="dropdown"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"
+            />
+            <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+          </svg>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="../staff">Staff</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="../inventory">Inventory</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="../storelist">Store</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" (click)="logout()">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body text-center">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+          alt="avatar"
+          class="rounded-circle img-fluid"
+          style="width: 150px"
+        />
+        <!-- <h1 class="my-3">{{ username }}</h1>
+        <p class="text-muted mb-1">Role: Staff</p>
+        <p class="text-muted mb-1">Store ID: 1</p>
+        <p class="text-muted mb-1">john.doe@example.com</p>
+        <p class="text-muted mb-4">Bay Area, San Francisco, CA</p> -->
+        <div class="d-flex justify-content-center mb-2">
+          <div class="dropdown">
+            <button class="btn btn-toggle align-items-center rounded collapsed">
+              Add
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="../add-actor">New Actor</a>
+              <a routerLink="/add-film">New Film </a>
+              <a routerLink="/add-staff">New Staff</a>
+              <a routerLink="/add-customer">New Customer</a>
+              <a routerLink="../add-store">New Store</a>
+              <a routerLink="../add-inventory">New Inventory</a>
+            </div>
+          </div>
+          <div class="dropdown dropstart">
+            <button class="btn btn-toggle align-items-center rounded collapsed">
+              Update
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="/update-actor">Update Actor Name</a>
+              <a routerLink="/update-film">Update File</a>
+              <a routerLink="/update-staff">Update Staff Details</a>
+              <a routerLink="/update-customer">Update Customer Details</a>
+            </div>
+          </div>
+          <div class="dropdown dropstart">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              routerLink="/payment-list"
+            >
+              Revenue
+            </button>
+            <!-- <div class="dropdown-content">
+                            <a href="payment-entry">Payment Entry</a>
+                            <a href="view-revenue">Total Revenue</a>
+                            <a href="#">Revenue of Store</a>
+                            <a href="#">Films Revenue</a>
+                            <a href="#">Revenue of a Film</a>
+                            <a href="#">Revenue of a Films in Store</a>
+                        </div> -->
+          </div>
+          <button
+            class="btn btn-toggle align-items-center rounded collapsed"
+            routerLink="../actor"
+          >
+            Actor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
