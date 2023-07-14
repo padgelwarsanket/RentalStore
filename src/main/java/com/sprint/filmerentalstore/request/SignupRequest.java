@@ -1,4 +1,4 @@
-package com.sprint.filmrentalstore.request;
+package com.sprint.filmerentalstore.request;
 
 import java.util.Set;
 

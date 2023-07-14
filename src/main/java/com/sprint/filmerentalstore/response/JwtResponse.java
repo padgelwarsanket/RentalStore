@@ -1,4 +1,4 @@
-package com.sprint.filmrentalstore.response;
+package com.sprint.filmerentalstore.response;
 
 import java.util.List;
 

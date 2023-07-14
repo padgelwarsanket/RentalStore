@@ -24,11 +24,11 @@ import com.sprint.filmerentalstore.entity.User;
 import com.sprint.filmerentalstore.jwt.JwtUtils;
 import com.sprint.filmerentalstore.repository.RoleRepository;
 import com.sprint.filmerentalstore.repository.UserRepository;
+import com.sprint.filmerentalstore.request.LoginRequest;
+import com.sprint.filmerentalstore.request.SignupRequest;
+import com.sprint.filmerentalstore.response.JwtResponse;
+import com.sprint.filmerentalstore.response.MessageResponse;
 import com.sprint.filmerentalstore.serviceimpl.UserDetailsImpl;
-import com.sprint.filmrentalstore.request.LoginRequest;
-import com.sprint.filmrentalstore.request.SignupRequest;
-import com.sprint.filmrentalstore.response.JwtResponse;
-import com.sprint.filmrentalstore.response.MessageResponse;
 
 import jakarta.validation.Valid;
 
